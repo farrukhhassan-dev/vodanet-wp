@@ -50,6 +50,7 @@ function vodanet_wp_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'vodanet-wp' ),
+			'footer'   => esc_html__( 'Footer Menu', 'vodanet-wp' ),
 		)
 	);
 
@@ -138,16 +139,38 @@ add_action( 'widgets_init', 'vodanet_wp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function vodanet_wp_scripts() {
-	wp_enqueue_style( 'vodanet-wp-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'vodanet-wp-style', 'rtl', 'replace' );
+	$theme_uri = get_template_directory_uri();
 
-	wp_enqueue_script( 'vodanet-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// Styles
+	wp_enqueue_style('vodanet-wp-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_style_add_data('vodanet-wp-style', 'rtl', 'replace');
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	wp_enqueue_style('owl-carousel', $theme_uri . '/assets/plugins/owl-carousel/owl.carousel.minb099.css', [], null);
+	wp_enqueue_style('owl-carousel-theme', $theme_uri . '/assets/plugins/owl-carousel/owl.theme.default.minb099.css', [], null);
+
+	wp_enqueue_style('vodanet-icons', $theme_uri . '/assets/css/vodanet-icons/style4963.css', [], null);
+	wp_enqueue_style('bootstrap', $theme_uri . '/assets/css/bootstrap.minbb93.css', [], null);
+	wp_enqueue_style('bootstrap-icons', $theme_uri . '/assets/css/bootstrap-icons.css', [], null);
+	wp_enqueue_style('fontawesome', $theme_uri . '/assets/css/all.min9e0b.css', [], null);
+	wp_enqueue_style('dtnorway-style', $theme_uri . '/assets/css/style.css', [], null);
+
+	// Scripts
+	wp_enqueue_script('jquery-core', $theme_uri . '/assets/js/jquery-3.6.0.min.js', array(), null, true);
+	wp_enqueue_script('bootstrap-js', $theme_uri . '/assets/js/bootstrap.minbb93.js', array('jquery-core'), null, true);
+	wp_enqueue_script('owl-carousel-js', $theme_uri . '/assets/plugins/owl-carousel/owl.carousel.minb099.js', array('jquery-core'), null, true);
+	wp_enqueue_script('theme-js', $theme_uri . '/assets/js/theme.js', array('jquery-core'), null, true);
+	wp_enqueue_script('main-js', $theme_uri . '/assets/js/main.js', array('jquery-core'), null, true);
+
+	// WordPress default script
+	wp_enqueue_script('vodanet-wp-navigation', $theme_uri . '/js/navigation.js', array(), _S_VERSION, true);
+
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+			wp_enqueue_script('comment-reply');
 	}
 }
-add_action( 'wp_enqueue_scripts', 'vodanet_wp_scripts' );
+add_action('wp_enqueue_scripts', 'vodanet_wp_scripts');
+
+
 
 /**
  * Implement the Custom Header feature.
