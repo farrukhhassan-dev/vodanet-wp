@@ -8,25 +8,50 @@
         </span>
     </li>
 
-    <?php if (is_single()) : ?>
-        <?php
-        $category = get_the_category();
-        if ($category && !empty($category[0])) :
-            $cat_link = get_category_link($category[0]->term_id);
-        ?>
-            <li class="taxonomy category">
-                <span property="itemListElement" typeof="ListItem">
-                    <a property="item" typeof="WebPage" title="Go to the <?php echo esc_attr($category[0]->name); ?> category" href="<?php echo esc_url($cat_link); ?>" class="taxonomy category">
-                        <span property="name"><?php echo esc_html($category[0]->name); ?></span>
-                    </a>
-                    <meta property="position" content="2">
-                </span>
-            </li>
-        <?php endif; ?>
+    <?php
+    // Blog archive page (usually 'Insights' if that's your page for posts)
+    $posts_page_id = get_option('page_for_posts');
+    $posts_page_title = get_the_title($posts_page_id);
+    $posts_page_url = get_permalink($posts_page_id);
+    ?>
+
+    <?php if (is_singular('career')) : ?>
+        <li class="post post-type-career">
+            <span property="itemListElement" typeof="ListItem">
+                <a property="item" typeof="WebPage" title="Go to the Career page" href="<?php echo esc_url(get_post_type_archive_link('career')); ?>" class="taxonomy career">
+                    <span property="name">Career</span>
+                </a>
+                <meta property="position" content="2">
+            </span>
+        </li>
         <li class="post post-page current-item">
             <span property="itemListElement" typeof="ListItem">
                 <span property="name" class="post post-page current-item"><?php the_title(); ?></span>
                 <meta property="position" content="3">
+            </span>
+        </li>
+
+    <?php elseif (is_singular('post')) : ?>
+        <li class="taxonomy blog-archive">
+            <span property="itemListElement" typeof="ListItem">
+                <a property="item" typeof="WebPage" title="Go to Insights" href="<?php echo esc_url($posts_page_url); ?>" class="taxonomy blog-archive">
+                    <span property="name"><?php echo esc_html($posts_page_title); ?></span>
+                </a>
+                <meta property="position" content="2">
+            </span>
+        </li>
+        <li class="post post-page current-item">
+            <span property="itemListElement" typeof="ListItem">
+                <span property="name" class="post post-page current-item"><?php the_title(); ?></span>
+                <meta property="position" content="3">
+            </span>
+        </li>
+
+    <?php elseif (is_home() || is_post_type_archive('post')) : ?>
+        <li class="post post-page current-item">
+            <span property="itemListElement" typeof="ListItem">
+                <span property="name" class="post post-page current-item"><?php echo esc_html($posts_page_title); ?></span>
+                <meta property="position" content="2">
             </span>
         </li>
 
@@ -39,10 +64,18 @@
         </li>
 
     <?php elseif (is_category()) : ?>
+        <li class="taxonomy category">
+            <span property="itemListElement" typeof="ListItem">
+                <a property="item" typeof="WebPage" title="Go to Insights" href="<?php echo esc_url($posts_page_url); ?>" class="taxonomy blog-archive">
+                    <span property="name"><?php echo esc_html($posts_page_title); ?></span>
+                </a>
+                <meta property="position" content="2">
+            </span>
+        </li>
         <li class="post post-page current-item">
             <span property="itemListElement" typeof="ListItem">
                 <span property="name" class="post post-page current-item"><?php single_cat_title(); ?></span>
-                <meta property="position" content="2">
+                <meta property="position" content="3">
             </span>
         </li>
 

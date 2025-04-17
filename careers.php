@@ -56,23 +56,33 @@ get_header();
 
               // Get the custom link from ACF field
               $career_link = get_field('career_link');
+              $status = get_field('career_link');
 
-              // If no career link, skip this post
-              // if (empty($career_link)) {
-              //   continue;
-              // }
               ?>
-              <div class="col-md-4">
+              <div class="col-md-12">
                 <div class="blog-card">
                   <div class="blog-card__content">
-                    <div class="blog-card__content__inner">
+                    <div class="blog-card__content__inner customize">
                       <h3 class="blog-card__title">
-                        <a href="<?php echo esc_url($career_link); ?>"><?php the_title(); ?></a>
+                        <?php if ($career_link): ?>
+                          <a href="<?php echo esc_url($career_link); ?>"><?php the_title(); ?></a>
+                        <?php else: ?>
+                          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        <?php endif; ?>
                       </h3>
+                      <p class="fs-6 fw-light mb-0 mt-2"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
+                      <div class="blog-card__date "><span><?php echo get_the_date('d'); ?></span><?php echo get_the_date('M'); ?></div>
+                      <div class="blog-card__date blog-card__status">Close</div>
 
-                      <a href="<?php echo esc_url($career_link); ?>" class="blog-card__link">
-                        Apply Now <i aria-hidden="true" class="icon-arrow-left"></i>
-                      </a>
+                      <?php if ($career_link): ?>
+                        <a href="<?php echo esc_url($career_link); ?>" class="blog-card__link">
+                          Apply Now <i aria-hidden="true" class="icon-arrow-left"></i>
+                        </a>
+                      <?php else: ?>
+                        <a href="<?php the_permalink(); ?>" class="blog-card__link">
+                          Apply Now <i aria-hidden="true" class="icon-arrow-left"></i>
+                        </a>
+                      <?php endif; ?>
                     </div>
                   </div>
                 </div>
@@ -83,7 +93,6 @@ get_header();
             echo '<p>No career opportunities found.</p>';
           endif;
           ?>
-
 
 
 

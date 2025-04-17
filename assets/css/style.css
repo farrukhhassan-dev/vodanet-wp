@@ -3609,7 +3609,7 @@ h2 .rss-widget-title {
   padding-right: 30px;
 }
 
-.vodanet-btn {
+.vodanet-btn, input.vodanet-btn {
   display: inline-block;
   vertical-align: middle;
   -webkit-appearance: none;
@@ -6506,7 +6506,32 @@ h6 {
   font-weight: 500;
   line-height: normal;
 }
+.blog-card__content__inner.customize {
+  padding: 40px 40px 40px;
+}
 
+.blog-card__content__inner.customize .blog-card__date {
+  padding: 5px 15px 10px;
+  top: 0;
+  right: 0;
+}
+.blog-card__content__inner.customize .blog-card__date.blog-card__status {right: auto;left: 0;color: red;}
+.blog-card.is-close {
+  cursor: not-allowed;
+  position: relative;
+}
+.blog-card.is-close:before{content: "";position: absolute;top: 0;bottom: 0;left: 0;right: 0;background-color: #1717172c;z-index: 99;display: block;cursor: not-allowed;}
+
+
+.service-one__item.address-box .service-one__item__thumb img {
+  min-height: 360px;
+}
+.service-one__item.address-box .service-one__item__text{text-align: left;margin-bottom: 0;}
+.service-one__item.address-box .service-one__item__text p{margin-bottom: 0;margin-top: 10px;}
+
+.service-one__item.address-box .service-one__item__thumb::after {
+    background: rgba(var(--vodanet-base-rgb, 35, 36, 41), 0.99);
+}
 .contact-one__right .form-one input::placeholder,
 .contact-one__right .form-one textarea::placeholder {
   color: var(--vodanet-text, #686A6F);
@@ -6514,9 +6539,11 @@ h6 {
   font-weight: 500;
   line-height: normal;
 }
+.contact-one__right .form-one .vodanet-btn{background-color: var(--vodanet-base, #e7e7e7);color: var(--vodanet-primary, #ec4823);font-size: 16px;}
+.contact-one__right .form-one .vodanet-btn:hover{background-color: var(--vodanet-secondary, #33333b);color: var(--vodanet-white, #fff);}
 
 .contact-one__right .form-one textarea {
-  height: 317px;
+  height: 100px;
 }
 
 .contact-map {

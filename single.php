@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-< id="primary" class="site-main">
+<main id="primary" class="site-main">
 	<div class="mid_wrapper">
 
 		<!-- Banner -->

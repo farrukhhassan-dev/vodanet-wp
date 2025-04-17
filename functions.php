@@ -229,3 +229,46 @@ function register_career_post_type() {
 	register_post_type('career', $args);
 }
 add_action('init', 'register_career_post_type');
+
+
+add_filter('get_the_archive_title', function ($title) {
+	if (is_post_type_archive('career')) {
+			$title = 'Careers'; // Set your custom archive title here
+	}
+	return $title;
+});
+
+
+function register_address_post_type() {
+	$labels = array(
+			'name'               => 'Addresses',
+			'singular_name'      => 'Address',
+			'menu_name'          => 'Addresses',
+			'name_admin_bar'     => 'Address',
+			'add_new'            => 'Add New',
+			'add_new_item'       => 'Add New Address',
+			'new_item'           => 'New Address',
+			'edit_item'          => 'Edit Address',
+			'view_item'          => 'View Address',
+			'all_items'          => 'All Addresses',
+			'search_items'       => 'Search Addresses',
+			'parent_item_colon'  => 'Parent Addresses:',
+			'not_found'          => 'No addresses found.',
+			'not_found_in_trash' => 'No addresses found in Trash.'
+	);
+
+	$args = array(
+			'labels'             => $labels,
+			'description'        => 'A custom post type for office or location addresses',
+			'public'             => true,
+			'menu_position'      => 25,
+			'menu_icon'          => 'dashicons-location', // WordPress location icon
+			'supports' 					 => array('title', 'editor', 'thumbnail'),
+			'has_archive'        => true,
+			'rewrite'            => array('slug' => 'addresses'),
+			'show_in_rest'       => true // Enable Gutenberg block editor
+	);
+
+	register_post_type('address', $args);
+}
+add_action('init', 'register_address_post_type');
