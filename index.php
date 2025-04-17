@@ -15,43 +15,71 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+	<div class="mid_wrapper">
 
-		<?php
-		if ( have_posts() ) :
+		<!-- Banner -->
+		<section class="page-header ">
+			<div class="page-header__bg"
+				style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/young-arab-man-works-diligently-his-desk-browsing-internet-his-digital-laptop-engrossed-online-webpage-he-takes-notes-researches-embodying-professionalism-efficiency.webp); background-position: center;">
+			</div>
+			<div class="container">
+				<h2 class="page-header__title">
+					Insights </h2><!-- /.page-title -->
+				<?php include get_template_directory() . '/inc/breadcrum.php'; ?>
+			</div>
+		</section>
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+		<section class="blog-one blog-one--page">
+			<div class="container">
+				<div class="row gutter-y-30">
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+						<?php
+						if (have_posts()):
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+							/* Start the Loop */
+							while (have_posts()):
+								the_post();
 
-			endwhile;
+								/*
+								 * Include the Post-Type-specific template for the content.
+								 * If you want to override this in a child theme, then include a file
+								 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+								 */
+								get_template_part('template-parts/content', get_post_type());
 
-			the_posts_navigation();
+							endwhile;
 
-		else :
+							?>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="blog-pagination">
+										<?php
+										$pagination = paginate_links(array(
+											'prev_text' => '<i class="fa fa-angle-left"></i>',
+											'next_text' => '<i class="fa fa-angle-right"></i>',
+											'type' => 'plain',
+										));
 
-			get_template_part( 'template-parts/content', 'none' );
+										echo $pagination;
+										?>
+									</div>
 
-		endif;
-		?>
+								</div><!-- /.col-lg-12 -->
+							</div>
+							<?php
 
-	</main><!-- #main -->
+						else:
+
+							get_template_part('template-parts/content', 'none');
+
+						endif;
+						?>
+				</div>
+			</div>
+		</section>
+	</div>
+</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

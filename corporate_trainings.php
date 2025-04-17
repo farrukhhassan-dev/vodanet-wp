@@ -25,20 +25,8 @@ get_header();
       <div class="container">
         <h2 class="page-header__title">
           Corporate Training </h2>
-        <ul class="vodanet-breadcrumb list-unstyled">
-          <li class="home">
-            <span property="itemListElement" typeof="ListItem">
-              <a property="item" typeof="WebPage" title="Go to vodanet." href="index.html" class="home"><span
-                  property="name">Vodanet</span></a>
-              <meta property="position" content="1">
-            </span>
-          </li>
-          <li class="post post-page current-item">
-            <span property="itemListElement" typeof="ListItem">
-              <span property="name" class="post post-page current-item">Corporate Training</span>
-            </span>
-          </li>
-        </ul>
+          <?php include get_template_directory() . '/inc/breadcrum.php'; ?>
+
       </div>
     </section>
 

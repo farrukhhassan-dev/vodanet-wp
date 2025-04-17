@@ -12,8 +12,8 @@ jQuery(document).ready(function () {
 		margin: 0
 	});
 	jQuery(".service-three__carousel").owlCarousel({
-		loop: true,
-		margin: 0,
+		loop: false,
+		margin: 20,
 		items: 1,
 		nav: false,
 		dots: false,
@@ -24,11 +24,11 @@ jQuery(document).ready(function () {
 		animateIn: "",
 		autoplayHoverPause: true,
 		responsive: {
-			0: { margin: 0, items: 1 },
-			575: { margin: 0, items: 1 },
-			767: { margin: 0, items: 2 },
-			992: { margin: 0, items: 2 },
-			1200: { margin: 0, items: 3 }
+			0: { margin: 10, items: 1 },
+			575: { margin: 10, items: 1 },
+			767: { margin: 15, items: 2 },
+			992: { margin: 20, items: 2 },
+			1200: { margin: 20, items: 3 }
 		}
 	});
 

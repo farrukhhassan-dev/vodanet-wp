@@ -199,3 +199,33 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function register_career_post_type() {
+	$labels = array(
+			'name' => 'Careers',
+			'singular_name' => 'Career',
+			'menu_name' => 'Careers',
+			'add_new' => 'Add New Career',
+			'add_new_item' => 'Add New Career',
+			'edit_item' => 'Edit Career',
+			'new_item' => 'New Career',
+			'view_item' => 'View Career',
+			'search_items' => 'Search Careers',
+			'not_found' => 'No careers found',
+			'not_found_in_trash' => 'No careers found in Trash'
+	);
+
+	$args = array(
+			'label' => 'Careers',
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'careers'),
+			'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+			'menu_icon' => 'dashicons-id',
+			'show_in_rest' => true,
+	);
+
+	register_post_type('career', $args);
+}
+add_action('init', 'register_career_post_type');

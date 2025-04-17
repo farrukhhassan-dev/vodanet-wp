@@ -5101,6 +5101,7 @@ h6 {
 .blog-card__image {
   position: relative;
   overflow: hidden;
+  max-height: 200px;
 }
 
 .blog-card__image img {
@@ -5750,7 +5751,10 @@ h6 {
 
 .blog-one {
   position: relative;
-  background: var(--vodanet-gray, #F4F5F8);
+  background: var(--vodanet-grey, #f5f5f5);
+}
+.single .blog-one {
+  background: var(--vodanet-grey, #fff);
 }
 
 .blog-one--page {
@@ -7431,7 +7435,6 @@ h6 {
   right: 0;
   z-index: 999;
   top: 0;
-  background-color: var(--vodanet-secondary, #33333b);
   transform: translateY(-100%);
   box-shadow: 0px 3px 18px rgba(var(--vodanet-secondary-rgb, 35, 36, 41), 0.07);
   transition: 0.6s cubic-bezier(0.24, 0.74, 0.58, 1);
@@ -19486,6 +19489,7 @@ input[type=textarea]:focus-visible,
 .blog-pagination span:hover {
   background-color: var(--vodanet-base);
   border-color: var(--vodanet-base);
+  color: var(--vodanet-primary);
 }
 
 .wp-block-post-template.wp-block-post-template,
@@ -19618,7 +19622,7 @@ ul.wp-block-rss.wp-block-rss {
 }
 .comments-link i,
 .byline i {
-  color: var(--vodanet-base);
+  color: var(--vodanet-primary);
   margin-right: 4px;
 }
 .comments-link a,
@@ -20827,7 +20831,7 @@ ul.products li.product .onsale {
 
 .woocommerce-pagination ul a:hover,
 .woocommerce-pagination ul span {
-  background-color: var(--vodanet-base);
+  background-color: var(--vodanet-pri);
   border-color: var(--vodanet-base);
   color: var(--vodanet-black);
 }

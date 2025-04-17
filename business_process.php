@@ -23,21 +23,7 @@
 				<div class="container">
 					<h2 class="page-header__title">
 						Business Process </h2><!-- /.page-title -->
-					<ul class="vodanet-breadcrumb list-unstyled">
-						<!-- Breadcrumb NavXT 7.3.0 -->
-						<li class="home">
-							<span property="itemListElement" typeof="ListItem">
-								<a property="item"
-									typeof="WebPage" title="Go to vodanet." href="index.html"
-									class="home"><span property="name">Vodanet</span></a>
-								<meta property="position" content="1">
-							</span></li>
-						<li class="post post-page current-item">
-							<span property="itemListElement" typeof="ListItem">
-								<span property="name" class="post post-page current-item">Business Process</span>
-							</span>
-						</li>
-					</ul><!-- /.thm-breadcrumb list-unstyled -->
+						<?php include get_template_directory() . '/inc/breadcrum.php'; ?>
 				</div>
 			</section>
 
@@ -47,7 +33,7 @@
 					<div class="row gutter-y-30 mb-5 align-items-center">
 						<div class="col-lg-4">
 							<div class="about-three__left">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/about-s-3-1.webp" width="100%" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporate-training.webp" width="100%" alt="">
 							</div>
 						</div>
 						<div class="col-lg-8">
@@ -105,14 +91,14 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="about-three__left">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/about-s-3-1.webp" width="100%" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/staff-agu.webp" width="100%" alt="">
 							</div>
 						</div>
 					</div>
 					<div class="row gutter-y-30 mb-5 align-items-center">
 						<div class="col-lg-4">
 							<div class="about-three__left">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/about-s-3-1.webp" width="100%" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-mang.webp" width="100%" alt="">
 							</div>
 						</div>
 						<div class="col-lg-8">

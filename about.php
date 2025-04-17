@@ -24,21 +24,7 @@ get_header();
       <div class="container">
         <h2 class="page-header__title">
           About </h2><!-- /.page-title -->
-        <ul class="vodanet-breadcrumb list-unstyled">
-          <!-- Breadcrumb NavXT 7.3.0 -->
-          <li class="home">
-            <span property="itemListElement" typeof="ListItem">
-              <a property="item" typeof="WebPage" title="Go to vodanet." href="index.html" class="home"><span
-                  property="name">Vodanet</span></a>
-              <meta property="position" content="1">
-            </span>
-          </li>
-          <li class="post post-page current-item">
-            <span property="itemListElement" typeof="ListItem">
-              <span property="name" class="post post-page current-item">About</span>
-            </span>
-          </li>
-        </ul><!-- /.thm-breadcrumb list-unstyled -->
+          <?php include get_template_directory() . '/inc/breadcrum.php'; ?>
       </div>
     </section>
 

@@ -1,14 +1,3 @@
-<?php
-/**
- * Template part for displaying posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package vodanet-wp
- */
-
-?>
-<div class="col-md-6 col-lg-4">
 <div class="blog-card">
 	<div class="blog-card__image">
 		<?php if (has_post_thumbnail()) :
@@ -36,9 +25,8 @@
 		</ul>
 		<div class="blog-card__content__inner">
 			<h3 class="blog-card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<!-- <p class="fs-6 fw-light mb-0 mt-2"><?php // echo wp_trim_words(get_the_excerpt(), 30); ?></p> -->
+			<p class="fs-6 fw-light mb-0 mt-2"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
 			<a href="<?php the_permalink(); ?>" class="blog-card__link">Read More <i class="icon-arrow-left"></i></a>
 		</div>
 	</div>
-</div>
 </div>

@@ -25,122 +25,68 @@ get_header();
       <div class="container">
         <h2 class="page-header__title">
           Careers </h2><!-- /.page-title -->
-        <ul class="vodanet-breadcrumb list-unstyled">
-          <!-- Breadcrumb NavXT 7.3.0 -->
-          <li class="home">
-            <span property="itemListElement" typeof="ListItem">
-              <a property="item" typeof="WebPage" title="Go to vodanet." href="index.html" class="home"><span
-                  property="name">Vodanet</span></a>
-              <meta property="position" content="1">
-            </span>
-          </li>
-          <li class="post post-page current-item">
-            <span property="itemListElement" typeof="ListItem">
-              <span property="name" class="post post-page current-item">Careers</span>
-            </span>
-          </li>
-        </ul><!-- /.thm-breadcrumb list-unstyled -->
+        <?php include get_template_directory() . '/inc/breadcrum.php'; ?>
       </div>
     </section>
 
     <!-- Blog section Start -->
     <section class="blog-one blog-one--page">
       <div class="container">
-        <div class="sec-title text-center">
+        <!-- <div class="sec-title text-center">
           <div class="d-flex align-items-center justify-content-center">
             <img decoding="async"
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/sec-title-s-1.webp"
+              src="<?php // echo get_template_directory_uri(); ?>/assets/images/2024/05/sec-title-s-1.webp"
               alt="sec-title-s-1" title="sec-title-s-1" class="sec-title__img">
             <h6 class="sec-title__tagline">Latest</h6>
           </div>
           <h3 class="sec-title__title">Careers</h3>
-        </div>
+        </div> -->
 
         <div class="row g-5">
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__content">
+          <?php
+          $args = array(
+            'post_type' => 'career',
+            'posts_per_page' => -1
+          );
+          $career_query = new WP_Query($args);
 
-                <div class="blog-card__content__inner">
-                  <h3 class="blog-card__title"><a href="/sustainable-tech-solutions-for-a-greener/">Sustainable
-                      Tech Solutions for a Greener</a></h3>
-                  <a href="/sustainable-tech-solutions-for-a-greener/" class="blog-card__link">Apply Now <i
-                      aria-hidden="true" class="icon-arrow-left"></i>
-                  </a>
+          if ($career_query->have_posts()):
+            while ($career_query->have_posts()):
+              $career_query->the_post();
+
+              // Get the custom link from ACF field
+              $career_link = get_field('career_link');
+
+              // If no career link, skip this post
+              // if (empty($career_link)) {
+              //   continue;
+              // }
+              ?>
+              <div class="col-md-4">
+                <div class="blog-card">
+                  <div class="blog-card__content">
+                    <div class="blog-card__content__inner">
+                      <h3 class="blog-card__title">
+                        <a href="<?php echo esc_url($career_link); ?>"><?php the_title(); ?></a>
+                      </h3>
+
+                      <a href="<?php echo esc_url($career_link); ?>" class="blog-card__link">
+                        Apply Now <i aria-hidden="true" class="icon-arrow-left"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__content">
+            <?php endwhile;
+            wp_reset_postdata();
+          else:
+            echo '<p>No career opportunities found.</p>';
+          endif;
+          ?>
 
-                <div class="blog-card__content__inner">
-                  <h3 class="blog-card__title"><a href="/the-evolution-of-smart-homes-tech-upgrades/">The
-                      Evolution of Smart Homes: Tech Upgrades</a></h3>
-                  <a href="/the-evolution-of-smart-homes-tech-upgrades/" class="blog-card__link">Apply Now <i
-                      aria-hidden="true" class="icon-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__content">
 
-                <div class="blog-card__content__inner">
-                  <h3 class="blog-card__title"><a href="/must-have-gadgets-for-tech-enthusiasts/">Must-Have
-                      Gadgets for Tech Enthusiasts</a></h3>
-                  <a href="/must-have-gadgets-for-tech-enthusiasts/" class="blog-card__link">Apply Now <i
-                      aria-hidden="true" class="icon-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__content">
 
-                <div class="blog-card__content__inner">
-                  <h3 class="blog-card__title"><a href="/sustainable-tech-solutions-for-a-greener/">Sustainable
-                      Tech Solutions for a Greener</a></h3>
-                  <a href="/sustainable-tech-solutions-for-a-greener/" class="blog-card__link">Apply Now <i
-                      aria-hidden="true" class="icon-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__content">
 
-                <div class="blog-card__content__inner">
-                  <h3 class="blog-card__title"><a href="/the-evolution-of-smart-homes-tech-upgrades/">The
-                      Evolution of Smart Homes: Tech Upgrades</a></h3>
-                  <a href="/the-evolution-of-smart-homes-tech-upgrades/" class="blog-card__link">Apply Now <i
-                      aria-hidden="true" class="icon-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="blog-card">
-              <div class="blog-card__content">
-
-                <div class="blog-card__content__inner">
-                  <h3 class="blog-card__title"><a href="/must-have-gadgets-for-tech-enthusiasts/">Must-Have
-                      Gadgets for Tech Enthusiasts</a></h3>
-                  <a href="/must-have-gadgets-for-tech-enthusiasts/" class="blog-card__link">Apply Now <i
-                      aria-hidden="true" class="icon-arrow-left"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
