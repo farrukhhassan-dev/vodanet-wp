@@ -52,7 +52,7 @@
 									<p class="about-three__top__text">Enhance collaboration and connectivity with our advanced unified communication and networking solutions. We design and implement robust infrastructures that ensure secure, seamless, and efficient communication across your organization.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="unified_communication_and_networking.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>unified-communication-and-networking" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -76,7 +76,7 @@
 									<p class="about-three__top__text">Optimize your IT operations with our proactive managed services. We provide round-the-clock monitoring, maintenance, and support to ensure your systems run smoothly while you focus on growing your business.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="managed_services.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>managed-services" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -109,7 +109,7 @@
 									<p class="about-three__top__text">Protect your digital assets with our comprehensive cyber security solutions. From threat detection to compliance management, we help safeguard your business against evolving cyber threats and vulnerabilities.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="cyber_security.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>cyber-security" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -133,7 +133,7 @@
 									<p class="about-three__top__text">Gain valuable insights into your IT infrastructure with our in-depth IT audits. We assess security, efficiency, and compliance to help you identify risks and opportunities for improvement, ensuring a resilient and optimized IT environment.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="it_audits.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>it-audits" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>

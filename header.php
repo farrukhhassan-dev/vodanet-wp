@@ -92,12 +92,8 @@
 							<!-- /.main-header__nav -->
 							<div class="main-header__right">
 								<div class="main-header__right__btn">
-									<a href="contact.html" class="vodanet-btn main-header__btn">Get In Touch</a>
+									<a href="<?php echo esc_url(home_url('/')); ?>contact" class="vodanet-btn main-header__btn">Get In Touch</a>
 								</div>
-								<!-- <a href="#" class="search-toggler main-header__right__info__item"><i class="icon-search"
-										aria-hidden="true"></i></a>
-								<a href="../vodanet-cart/index.html" class="main-header__right__info__item"><i class="icon-trolley-cart"
-										aria-hidden="true"></i></a> -->
 								<div class="mobile-nav__btn mobile-nav__toggler">
 									<span></span> <span></span> <span></span>
 								</div>

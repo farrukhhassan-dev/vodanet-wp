@@ -730,7 +730,7 @@ get_header();
                 </div>
               </div>
               <div class="why-choose-one__link mt-0">
-                <a href="contact.html" class="why-choose-one__link__btn vodanet-btn">Book Free Consultation</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>contact" class="why-choose-one__link__btn vodanet-btn">Book Free Consultation</a>
               </div>
             </div>
           </div>

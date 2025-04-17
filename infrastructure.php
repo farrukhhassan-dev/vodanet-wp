@@ -54,7 +54,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="it_products.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>it-products" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -82,7 +82,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="retails_products.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>retails-products" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -119,7 +119,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="surveillance_solutions.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>surveillance-solutions" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -147,7 +147,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="data_center.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>data-center" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>

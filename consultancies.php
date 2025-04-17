@@ -54,7 +54,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="it_consultancy.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>it-consultancy" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -82,7 +82,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="financial_consultanices.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>financial-consultanices" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -119,7 +119,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="corporate_formation_and_advisories.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>corporate-formation-and-advisories" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -147,7 +147,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="legal_consultancy.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>legal-consultancy" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -184,7 +184,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="digital_narketing.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>digital-narketing" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
@@ -212,7 +212,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="risk_security_and_compliance.html" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>risk-security-compliance" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>
