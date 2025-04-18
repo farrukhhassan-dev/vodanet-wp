@@ -316,7 +316,7 @@ get_header();
                                     </div>
                                     <div class="about-three__thumb__call__content">
                                         <span class="about-three__thumb__call__text">Call to anytime</span>
-                                        <h5 class="about-three__thumb__call__title"><a href="tel:+966-54-1714423">+966
+                                        <h5 class="about-three__thumb__call__title"><a href="tel:<?php echo get_theme_mod('voda_phone'); ?>">+966
                                                 54 1714423</a></h5>
                                     </div>
                                 </div>

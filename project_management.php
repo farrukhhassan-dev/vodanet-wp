@@ -25,7 +25,7 @@ get_header();
       <div class="container">
         <h2 class="page-header__title">
           Project Management </h2>
-          <?php include get_template_directory() . '/inc/breadcrum.php'; ?>
+        <?php include get_template_directory() . '/inc/breadcrum.php'; ?>
       </div>
     </section>
 
@@ -46,8 +46,13 @@ get_header();
             transformation, our
             services cater to your specific needs, ensuring seamless execution and high-quality
             outcomes.</p>
+          <div class="d-flex align-items-center gap-5 justify-content-between mb-5 border-top border-bottom py-3">
+            <a class="vodanet-btn" href="#our_project">Our Project Management Services</a>
+            <a class="vodanet-btn" href="#project_manag_training">Project Management Training & Certifications</a>
+            <a class="vodanet-btn" href="#project_manag_staff">Project Management Staff Augmentation</a>
+          </div>
         </div>
-        <div class="sec-title sec-title--one text-center">
+        <div class="sec-title sec-title--one text-center" id="our_project">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-2.webp" alt="">
           <h3 class="sec-title__title mt-3 mb-4">Our Project Management Services</h3>
         </div>
@@ -254,7 +259,7 @@ get_header();
     <section id="" class="about-three pb-0 min-h-sec-title">
       <div class="container">
 
-        <div class="sec-title sec-title--one text-center">
+        <div class="sec-title sec-title--one text-center" id="project_manag_training">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-1.webp" alt="">
           <h3 class="sec-title__title mt-3 mb-4">Project Management Training & Certifications</h3>
           <p class="mb-1 lead"><span style="font-weight: 600;">Building Expertise for the Leaders of
@@ -368,10 +373,10 @@ get_header();
       </div><!-- /.container -->
     </section>
 
-    <section id="" class="about-three pb-0 min-h-sec-title">
+    <section id="" class="about-three pb-0 min-h-sec-title" >
       <div class="container">
 
-        <div class="sec-title sec-title--one text-center">
+        <div class="sec-title sec-title--one text-center" id="project_manag_staff">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-3.webp" alt="">
           <h3 class="sec-title__title mt-3 mb-4">Project Management Staff Augmentation</h3>
           <p class="mb-1 lead"><span style="font-weight: 600;">Access Top-Tier Talent to Lead Your

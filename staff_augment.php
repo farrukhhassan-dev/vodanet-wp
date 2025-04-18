@@ -25,7 +25,7 @@ get_header();
             <div class="container">
                 <h2 class="page-header__title">
                     Staff Augment </h2>
-                    <?php include get_template_directory() . '/inc/breadcrum.php'; ?>
+                <?php include get_template_directory() . '/inc/breadcrum.php'; ?>
             </div>
         </section>
 
@@ -44,10 +44,15 @@ get_header();
                         specialized talent on demand.</p>
                     <p>We bring you highly-skilled, pre-vetted finance professionals—from C-level leaders to fintech
                         experts who integrate seamlessly with your existing team and deliver immediate impact.</p>
+                    <div
+                        class="d-flex align-items-center gap-5 justify-content-between mb-5 border-top border-bottom py-3">
+                        <a class="vodanet-btn" href="#advisory">Advisory & Management Consultants</a>
+                        <a class="vodanet-btn" href="#technology">Technology Consultants</a>
+                    </div>
                 </div>
-                <div class="sec-title sec-title--one text-center">
+                <div class="sec-title sec-title--one text-center" id="advisory">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/special-staff-min.webp" alt="">
-                    <h3 class="sec-title__title mt-3 mb-4">Our Specialized Talent Categories</h3>
+                    <h3 class="sec-title__title mt-3 mb-4">Advisory & Management Consultants</h3>
                 </div>
                 <div class="row gutter-y-30 mb-5 align-items-start">
                     <div class="col-lg-4">
@@ -378,9 +383,9 @@ get_header();
 
         <section id="" class="about-three pb-0 min-h-sec-title">
             <div class="container">
-                <div class="sec-title sec-title--one text-center">
+                <div class="sec-title sec-title--one text-center" id="technology">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/it-staff-min.webp" alt="">
-                    <h3 class="sec-title__title mt-3 mb-4">IT Staff Augmentation Services</h3>
+                    <h3 class="sec-title__title mt-3 mb-4">Technology Consultants</h3>
                     <p>Enhance your digital capabilities with specialized IT professionals across development,
                         cloud, data, DevSecOps, and design. VODANET empowers your business with top-tier talent,
                         seamlessly integrated into your teams.</p>
@@ -672,7 +677,7 @@ get_header();
                                     </div>
                                     <div class="about-three__thumb__call__content">
                                         <span class="about-three__thumb__call__text">Call to anytime</span>
-                                        <h5 class="about-three__thumb__call__title"><a href="tel:+966-54-1714423">+966
+                                        <h5 class="about-three__thumb__call__title"><a href="tel:<?php echo get_theme_mod('voda_phone'); ?>">+966
                                                 54 1714423</a></h5>
                                     </div>
                                 </div>

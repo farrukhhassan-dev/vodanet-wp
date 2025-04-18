@@ -272,3 +272,70 @@ function register_address_post_type() {
 	register_post_type('address', $args);
 }
 add_action('init', 'register_address_post_type');
+
+
+function voda_customize_register($wp_customize) {
+	$wp_customize->add_section('voda_contact_section', array(
+			'title'    => __('Contact Info', 'voda'),
+			'priority' => 30,
+	));
+
+	// Phone
+	$wp_customize->add_setting('voda_phone', array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+	));
+
+	$wp_customize->add_control('voda_phone', array(
+			'label'   => __('Phone Number', 'voda'),
+			'section' => 'voda_contact_section',
+			'type'    => 'text',
+	));
+
+	// Email
+	$wp_customize->add_setting('voda_email', array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_email',
+	));
+
+	$wp_customize->add_control('voda_email', array(
+			'label'   => __('Email Address', 'voda'),
+			'section' => 'voda_contact_section',
+			'type'    => 'email',
+	));
+
+	// Address
+	$wp_customize->add_setting('voda_address', array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_textarea_field',
+	));
+
+	$wp_customize->add_control('voda_address', array(
+			'label'   => __('Physical Address', 'voda'),
+			'section' => 'voda_contact_section',
+			'type'    => 'textarea',
+	));
+}
+add_action('customize_register', 'voda_customize_register');
+
+
+
+function voda_customize_remove_sections($wp_customize) {
+	// Example: Remove "Site Identity"
+	$wp_customize->remove_section('header_image');
+
+	// Remove "Colors"
+	$wp_customize->remove_section('colors');
+
+	// Remove "Background Image"
+	$wp_customize->remove_section('background_image');
+
+	// Remove "Widgets"
+	$wp_customize->remove_panel('widgets');
+
+	// Remove Homepage Settings
+	$wp_customize->remove_section('static_front_page');
+}
+add_action('customize_register', 'voda_customize_remove_sections', 999);
+
+

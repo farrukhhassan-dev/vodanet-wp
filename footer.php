@@ -27,7 +27,7 @@
 		<div class="container">
 			<div class="main-footer__top__inner">
 				<div class="main-footer__top__logo">
-					<a class="footer__logo vodanet-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<a class="footer__logo vodanet-logo" href="<?php echo esc_url(home_url('/')); ?>">
 						<img loading="lazy" decoding="async" width="150" height="39"
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/vodanet2x.svg" alt="vodanet">
 					</a>
@@ -93,8 +93,7 @@
 									<i aria-hidden="true" class="icon-call   "></i>
 								</div>
 								<div class="footer-widget__contact__inner">
-									<a href="tel:+966-54-1714423" class="footer-widget__contact__text">+966 54
-										1714423</a>
+										<a href="tel:<?php echo get_theme_mod('voda_phone'); ?>" class="footer-widget__contact__text"><?php echo get_theme_mod('voda_phone'); ?></a>
 								</div>
 							</li>
 							<li class="footer-widget__contact__item">
@@ -102,8 +101,8 @@
 									<i aria-hidden="true" class=" icon-Earth"></i>
 								</div>
 								<div class="footer-widget__contact__inner">
-									<a href="mailto:support@vodanetcorp.com"
-										class="footer-widget__contact__text">support@vodanetcorp.com</a>
+									<a href="mailto:<?php echo get_theme_mod('voda_email'); ?>"
+										class="footer-widget__contact__text"><?php echo get_theme_mod('voda_email'); ?></a>
 								</div>
 							</li>
 							<li class="footer-widget__contact__item">
@@ -111,8 +110,7 @@
 									<i aria-hidden="true" class=" icon-Pin"></i>
 								</div>
 								<div class="footer-widget__contact__inner">
-									<p class="footer-widget__contact__text">Al Aseel Plaza, 3rd Floor Toubah
-										Street, Al Sharafeyah Distt, Jeddah, Saudi Arabia</p>
+									<p class="footer-widget__contact__text"><?php echo get_theme_mod('voda_address'); ?></p>
 								</div>
 							</li>
 						</ul>

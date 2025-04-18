@@ -38,7 +38,11 @@ get_header();
 									</div>
 									<div class="contact-one__list__content"> <span class="contact-one__list__subtitle">Have any
 											question?</span>
-										<p class="contact-one__list__action">Free <a href="tel:+966541714423">+966-54-1714423</a></p>
+										<p class="contact-one__list__action">
+
+											<a
+												href="tel:<?php echo get_theme_mod('voda_phone'); ?>"><?php echo get_theme_mod('voda_phone'); ?></a>
+										</p>
 									</div>
 								</li>
 								<li class="contact-one__list__item">
@@ -46,7 +50,7 @@ get_header();
 									<div class="contact-one__list__content"> <span class="contact-one__list__subtitle">Send
 											Email</span>
 										<p class="contact-one__list__action"><a
-												href="mailto:support@vodanetcorp.com">support@vodanetcorp.com</a>
+												href="mailto:<?php echo get_theme_mod('voda_email'); ?>"><?php echo get_theme_mod('voda_email'); ?></a>
 										</p>
 									</div>
 								</li>
@@ -54,8 +58,7 @@ get_header();
 									<div class="contact-one__list__icon"> <i aria-hidden="true" class=" icon-Pin"></i></div>
 									<div class="contact-one__list__content"> <span class="contact-one__list__subtitle">Visit
 											Anytime</span>
-										<p class="contact-one__list__action">Al Aseel Plaza, 3rd Floor Toubah Street, Al Sharafeyah Distt,
-											Jeddah, Saudi Arabia</p>
+										<p class="contact-one__list__action"><?php echo get_theme_mod('voda_address'); ?></p>
 									</div>
 								</li>
 							</ul>
@@ -100,48 +103,50 @@ get_header();
 
 		<section class="client-carousel">
 			<div class="container">
-				<?php
-				$args = array(
-					'post_type' => 'address',
-					'posts_per_page' => -1, // or set a number if you want to limit
-					'orderby' => 'date',
-					'order' => 'ASC',
-				);
+				<div class="row">
+					<?php
+					$args = array(
+						'post_type' => 'address',
+						'posts_per_page' => -1, // or set a number if you want to limit
+						'orderby' => 'date',
+						'order' => 'ASC',
+					);
 
-				$address_query = new WP_Query($args);
+					$address_query = new WP_Query($args);
 
-				if ($address_query->have_posts()):
-					while ($address_query->have_posts()):
-						$address_query->the_post();
-						?>
+					if ($address_query->have_posts()):
+						while ($address_query->have_posts()):
+							$address_query->the_post();
+							?>
 
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="service-one__item address-box">
-								<div class="service-one__item__icon">
-								<?php the_title(); ?>
-								</div>
-								<div class="service-one__item__thumb">
-									<?php
-									if (has_post_thumbnail()):
-										the_post_thumbnail('full'); // Adjust size as needed
-									endif;
-									?>
-								</div>
-								<div class="service-one__item__content">
-									<div class="service-one__item__text">
-										<?php the_content(); ?> <!-- Or use the_content() if you want the full content -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="service-one__item address-box">
+									<div class="service-one__item__icon">
+										<?php the_title(); ?>
 									</div>
+									<div class="service-one__item__thumb">
+										<?php
+										if (has_post_thumbnail()):
+											the_post_thumbnail('full'); // Adjust size as needed
+										endif;
+										?>
+									</div>
+									<div class="service-one__item__content">
+										<div class="service-one__item__text">
+											<?php the_content(); ?> <!-- Or use the_content() if you want the full content -->
+										</div>
 
+									</div>
 								</div>
 							</div>
-						</div>
 
-					<?php endwhile;
-					wp_reset_postdata();
-				else:
-					echo '<p>No addresses found.</p>';
-				endif;
-				?>
+						<?php endwhile;
+						wp_reset_postdata();
+					else:
+						echo '<p>No addresses found.</p>';
+					endif;
+					?>
+				</div>
 			</div>
 
 		</section>

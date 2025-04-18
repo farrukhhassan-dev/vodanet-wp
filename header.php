@@ -36,22 +36,25 @@
 					<div class="topbar-one__inner">
 						<ul class="list-unstyled topbar-one__info ml-0">
 							<li class="topbar-one__info__item">
-								<i aria-hidden="true" class="topbar-one__info__icon fas fa-map-marker-alt"></i> 30
-								Commercial Road
-								Fratton, Australia
+								<i aria-hidden="true" class="topbar-one__info__icon fas fa-map-marker-alt"></i> <?php echo get_theme_mod('voda_address'); ?>
 							</li>
 							<li class="topbar-one__info__item">
-								<i aria-hidden="true" class="topbar-one__info__icon  icon-email"></i> <a
-									href="mailto:support@vodanetcorp.com">support@vodanetcorp.com</a>
+								<i aria-hidden="true" class="topbar-one__info__icon  icon-email"></i>
+
+								<a href="mailto:<?php echo get_theme_mod('voda_email'); ?>"><?php echo get_theme_mod('voda_email'); ?></a>
 							</li>
 						</ul>
 						<div class="topbar-one__right">
-							<a href="tel:+92-3800-8060" class="topbar-one__right__call">
+
+
+							<a href="tel:<?php echo get_theme_mod('voda_phone'); ?>" class="topbar-one__right__call">
 								<div class="topbar-one__right__call__icon">
 									<i aria-hidden="true" class="icon-telephone"></i>
 								</div>
-								<p class="topbar-one__right__call__text">+966-54-1714423</p>
+
+								<p class="topbar-one__right__call__text"><?php echo get_theme_mod('voda_phone'); ?></p>
 							</a>
+
 							<div class="topbar-one__social">
 								<a href="https://facebook.com/">
 									<i aria-hidden="true" class="fab fa-facebook-f"></i> </a>
@@ -71,9 +74,10 @@
 				<div class="container-fluid">
 					<div class="main-header__inner">
 						<div class="main-header__logo logo-vodanet">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<img decoding="async" width="295" height="80" src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/vodanet2x.svg" alt="vodanet">
-</a>
+							<a href="<?php echo esc_url(home_url('/')); ?>">
+								<img decoding="async" width="295" height="80"
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/vodanet2x.svg" alt="vodanet">
+							</a>
 
 						</div><!-- /.main-header__logo -->
 						<div class="main-header__inner__item">
@@ -92,7 +96,8 @@
 							<!-- /.main-header__nav -->
 							<div class="main-header__right">
 								<div class="main-header__right__btn">
-									<a href="<?php echo esc_url(home_url('/')); ?>contact" class="vodanet-btn main-header__btn">Get In Touch</a>
+									<a href="<?php echo esc_url(home_url('/')); ?>contact" class="vodanet-btn main-header__btn">Get In
+										Touch</a>
 								</div>
 								<div class="mobile-nav__btn mobile-nav__toggler">
 									<span></span> <span></span> <span></span>
@@ -124,12 +129,12 @@
 					<ul class="mobile-nav__contact list-unstyled ml-0">
 						<li>
 							<i class="fa fa-envelope"></i>
-							<a href="mailto:support@vodanetcorp.com">support@vodanetcorp.com</a>
+							<a href="mailto:<?php echo get_theme_mod('voda_email'); ?>"><?php echo get_theme_mod('voda_email'); ?></a>
 						</li>
 						<li>
 							<i class="fa fa-phone-alt"></i>
 							<a href="tel:+92-3800-8060">
-								+966-54-1714423 </a>
+								<?php echo get_theme_mod('voda_phone'); ?> </a>
 						</li>
 					</ul><!-- /.mobile-nav__contact -->
 					<div class="mobile-nav__top">
