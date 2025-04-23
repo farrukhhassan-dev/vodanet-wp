@@ -86,7 +86,7 @@ get_header();
 										<p role="status" aria-live="polite" aria-atomic="true"></p>
 										<ul></ul>
 									</div>
-									<?php echo do_shortcode('[contact-form-7 id="d93fb82" title="Contact form 1"]') ?>
+									<?php echo do_shortcode('[contact-form-7 id="79fe535" title="Contact form 1"]') ?>
 								</div>
 							</div>
 						</div>

@@ -309,7 +309,7 @@ get_header();
 
 
     <!-- Contact section Start -->
-    <?php include get_template_directory() . '/inc/contact-form.php'; ?>
+    <?php include get_template_directory() . '/inc/request-quote-form.php'; ?>
     <!-- Contact section End -->
 
   </div>

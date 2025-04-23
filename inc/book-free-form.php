@@ -19,21 +19,21 @@
 									<img decoding="async"
 										src="<?php echo get_template_directory_uri(); ?>/assets/images/2024/05/sec-title-s-2.webp"
 										alt="sec-title-s-2" title="sec-title-s-2" class="sec-title__img">
-									<h6 class="sec-title__tagline">Contact with us</h6>
+									<h6 class="sec-title__tagline">Connect with us</h6>
 								</div>
-								<h3 class="sec-title__title"> Get in touch</h3>
+								<h3 class="sec-title__title">Book Free Consultation</h3>
 							</div>
 						</div>
 					</div>
 					<div class="contact-two__content">
 						<div class="contact-two__form__inner">
-							<div class="contact-two__form contact-form-validated form-one">
+							<div class="contact-two__form book-free contact-form-validated form-one">
 								<div class="wpcf7 no-js" id="wpcf7-f1088-p17-o1" lang="en-US" dir="ltr">
 									<div class="screen-reader-response">
 										<p role="status" aria-live="polite" aria-atomic="true"></p>
 										<ul></ul>
 									</div>
-									<?php echo do_shortcode('[contact-form-7 id="79fe535" title="Contact form 1"]') ?>
+									<?php echo do_shortcode('[contact-form-7 id="2a49df9" title="Book Free Consultation"]') ?>
 								</div>
 							</div>
 						</div>

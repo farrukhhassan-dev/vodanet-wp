@@ -324,7 +324,7 @@ get_header();
     </section>
 
     <!-- Contact section Start -->
-    <?php include get_template_directory() . '/inc/contact-form.php'; ?>
+    <?php include get_template_directory() . '/inc/book-free-form.php'; ?>
 
   </div>
 
