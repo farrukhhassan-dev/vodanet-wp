@@ -37,7 +37,7 @@ get_header();
 					?>
 				</h2>
 				<?php include get_template_directory() . '/inc/breadcrum.php'; ?>
-				<a href="#" class="why-choose-one__link__btn vodanet-btn">Apply
+				<a href="<?php echo get_theme_mod('voda_apply'); ?>" class="why-choose-one__link__btn vodanet-btn">Apply
                       Now</a>
 			</div>
 		</section>

@@ -243,7 +243,7 @@ get_header();
               title="sec-title-s-1" class="sec-title__img">
             <h6 class="sec-title__tagline">Latest</h6>
           </div>
-          <h3 class="sec-title__title">Featured Careerss</h3>
+          <h3 class="sec-title__title">Featured Insights</h3>
         </div>
 
         <div class="service-three__carousel vodanet-owl__carousel owl-theme owl-carousel">

@@ -45,7 +45,7 @@
 												alt="sec-title-s-1" title="sec-title-s-1" class="sec-title__img">
 											<h6 class="sec-title__tagline">01</h6>
 										</div>
-										<h3 class="sec-title__title">Corpotate Trainings</h3>
+										<h3 class="sec-title__title">Corporate Trainings</h3>
 									</div>
 									<p class="about-three__top__text">Our company specializes in providing comprehensive
 										business solutions that help organizations achieve their goals through
@@ -54,7 +54,7 @@
 										outsourcing of digital services.</p>
 								</div>
 								<div class="about-three__link">
-									<a href="<?php echo esc_url(home_url('/')); ?>corpotate-trainings" class="about-three__link__btn vodanet-btn vodanet-btn--base">
+									<a href="<?php echo esc_url(home_url('/')); ?>Corporate-trainings" class="about-three__link__btn vodanet-btn vodanet-btn--base">
 										<span>Read More</span>
 									</a>
 								</div>

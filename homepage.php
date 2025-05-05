@@ -444,7 +444,7 @@ get_header();
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="service-three__item">
-              <a href="<?php echo esc_url(home_url('/')); ?>corpotate-trainings" class="service-three__item__inner">
+              <a href="<?php echo esc_url(home_url('/')); ?>corporate-trainings" class="service-three__item__inner">
                 <div class="service-three__item__icon">
                   <div class="service-three__item__icon__inner">
                     <i aria-hidden="true" class=" icon-user-tie"></i>
